@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStart - Inovando o Futuro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav button {
+      background-color: white;
+      color: #0a3d62;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    nav button:hover {
+      background-color: #1e90ff;
+      color: white;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 30px auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #0a3d62;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+   .main-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#centerImage {
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#centerImage:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechStart</h1>
+    <p>Inovando o futuro com tecnologia</p>
+    <nav>
+      <button>Home</button>
+      <button>Serviços</button>
+      <button>Contato</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bem-vindo(a) à TechStart</h2>
+    <p>Ajudamos empresas e pessoas a transformar ideias em soluções digitais.</p>
+
+    <button class="main-button" id="learnMoreBtn">Saiba mais</button>
+    <img id="centerImage" src="placholder.jpg" alt="Imagem TechStart">
+
+
+    <p id="aboutText">Nosso time é composto por especialistas em desenvolvimento web, IA e automação.</p>
+
+    <section class="form-section">
+      <h3>Entre em contato</h3>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Seu nome" />
+        <input type="email" id="email" placeholder="Seu e-mail" />
+        <textarea id="message" rows="4" placeholder="Sua mensagem"></textarea>
+        <!-- TAREFA 4: Fazer o formulário exibir uma mensagem de sucesso ao ser enviado -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechStart. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+const learnMoreBtn = document.getElementById('learnMoreBtn');
+
+learnMoreBtn.addEventListener('click', () => {
+  alert('Obrigado por querer saber mais sobre a TechStart!');
+});
+
+  </script>
+
+</body>
+</html>
