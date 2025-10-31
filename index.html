@@ -16,7 +16,7 @@
     }
 
     header {
-      background-color: #0a3d62;
+      background-color: #2e7d32; /* verde escuro */
       color: white;
       padding: 20px;
       text-align: center;
@@ -24,7 +24,7 @@
 
     nav button {
       background-color: white;
-      color: #0a3d62;
+      color: #2e7d32;
       border: none;
       padding: 10px 20px;
       margin: 5px;
@@ -33,7 +33,7 @@
     }
 
     nav button:hover {
-      background-color: #1e90ff;
+      background-color: #43a047; /* verde médio */
       color: white;
     }
 
@@ -60,7 +60,7 @@
     }
 
     button[type="submit"] {
-      background-color: #0a3d62;
+      background-color: #2e7d32;
       color: white;
       border: none;
       padding: 10px 15px;
@@ -69,7 +69,7 @@
     }
 
     footer {
-      background-color: #0a3d62;
+      background-color: #2e7d32;
       color: white;
       text-align: center;
       padding: 15px;
@@ -78,28 +78,33 @@
       width: 100%;
     }
 
-   .main-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#centerImage {
-  display: block;
-  margin: 20px auto;
-  width: 400px;
-  height: 200px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
+    .main-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #43a047; /* verde */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
 
-#centerImage:hover {
-  transform: scale(1.1);
-}
+    .main-button:hover {
+      background-color: #2e7d32;
+    }
 
+    #centerImage {
+      display: block;
+      margin: 20px auto;
+      width: 400px;
+      height: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    #centerImage:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
@@ -121,16 +126,14 @@
     <button class="main-button" id="learnMoreBtn">Saiba mais</button>
     <img id="centerImage" src="placholder.jpg" alt="Imagem TechStart">
 
-
     <p id="aboutText">Nosso time é composto por especialistas em desenvolvimento web, IA e automação.</p>
 
     <section class="form-section">
       <h3>Entre em contato</h3>
       <form id="contactForm">
-        <input type="text" id="name" placeholder="Seu nome" />
-        <input type="email" id="email" placeholder="Seu e-mail" />
-        <textarea id="message" rows="4" placeholder="Sua mensagem"></textarea>
-        <!-- TAREFA 4: Fazer o formulário exibir uma mensagem de sucesso ao ser enviado -->
+        <input type="text" id="name" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu e-mail" required />
+        <textarea id="message" rows="4" placeholder="Sua mensagem" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
@@ -141,12 +144,19 @@
   </footer>
 
   <script>
-const learnMoreBtn = document.getElementById('learnMoreBtn');
+    // TASK 1 - Botão "Saiba Mais"
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    learnMoreBtn.addEventListener('click', () => {
+      alert('Obrigado por querer saber mais sobre a TechStart!');
+    });
 
-learnMoreBtn.addEventListener('click', () => {
-  alert('Obrigado por querer saber mais sobre a TechStart!');
-});
-
+    // TASK 3 - Evitar reload e limpar formulário
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Formulário enviado com sucesso!');
+      form.reset();
+    });
   </script>
 
 </body>
